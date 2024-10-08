@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy</title>
+    <!-- Google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/46f1f947fa.js" crossorigin="anonymous"></script>
+    <!-- Tailwind and DaisyUI link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bbg:'#F9F7F3',
+             btnPrimary: '#0E7A81', 
+             smfontColor:'rgba(17, 17, 17, 0.70)',
+             fontboldColor:'#111',
+             placeHolder:'rgba(17, 17, 17, 0.40)',
+            },
+            fontFamily:{
+              Lexend: 'Lexend',
+            },
+          },
+        },
+      }  
+  </script>
+</head>
+<body>
+<!-- NavBar -->
+<nav class="container mx-auto w-11/12 lg:w-10/12">
+    <div class="navbar py-5 lg:py-7">
+
+        <!-- Navigation left. -->
+        <div class="navbar-start flex justify-between">
+            <div class="dropdown ">
+                <div class="flex items-center justify-around">   
+                    <div class="flex gap-2">
+                        <img src="./images/logo.webp" class="h-7">
+                    <a href=""><h2 class="text-common_heading_color text-xl lg:text-4xl font-extrabold">Peddy</h2></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation middle. -->
+        <div class="navbar-center hidden lg:flex">
+            <ul class="gap-11 menu-horizontal px-1 text-nav_link_color text-base font-normal">
+                <li><a href="#" class="text-common_button_color text-base font-bold">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Navigation right. -->
+        <div class="navbar-end gap-6">
+            <button class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center ">
+                    <i class="fa-regular fa-user"></i></button>        
+        </div>
+    </div>
+</nav>
+    <!-- Main Section -->
+<main>
+    <!-- Banner -->
+<section class="container mx-auto w-11/12 lg:w-10/12">
+    <div class="hero min-h-96 rounded-3xl">
+        <div class="hero-content flex-col text-center">
+            <p class="font-bold text-gray-400 text-xl">Bringing Families Together ❤️‍🔥</p>
+            <h1 class="text-7xl font-bold"> Your Path to Adoption <br> Starts Here</h1>
+            <p class="py-4 text-sm ">It is a long established fact that a reader will be distracted by the readable content of a page when looking <br> at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            <button class="btn bg-btnPrimary text-white">View More</button>
+            <div>
+                <img src="./images/pet.webp"class="" /></div>
+            <div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Main section -->
+ <!-- discussion section -->
+<section class="container mx-auto w-11/12 lg:w-10/12 my-12 lg:my-24">
+    <div class="flex lg:w-2/5 mx-auto flex-col items-center justify-center space-y-8 lg:my-12">
+        <h2 class="text-3xl lg:text-5xl font-bold text-center">
+          Let's Discuss
+        </h2>
+        <p class="opacity-60 text-center">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+        </p>
+      </div>
+      <div class="flex justify-between space-x-56">
+        <button class="btn text-3xl py-2 px-6 rounded-3xl flex items-center font-normal"><i class="fa-solid fa-dog"></i>Dog</button>
+        <button class="btn text-3xl py-2 px-6 rounded-3xl flex items-center font-normal"><i class="fa-solid fa-cat"></i>Cat</button>
+        <button class="btn text-3xl py-2 px-6 rounded-3xl flex items-center font-normal"><i class="fa-solid fa-otter"></i>Rabbit</button>
+        <button class="btn text-3xl py-2 px-6 rounded-3xl flex items-center font-normal"><i class="fa-solid fa-dove"></i>Birds</button>
+      </div>
+      <!-- discussions with selections -->
+      <div class="flex lg:flex-row flex-col gap-8 my-12">
+        <div id="post-container" class="lg:w-8/12 space-y-5">
+  <!-- demo card showing without dynamic value  -->
+  
+  
+  
+          <div class="flex w-full justify-center">
+            <span
+              id="postLoader"
+              class="loading loading-spinner loading-lg lg:mt-24 text-primary hidden"
+            ></span>
+          </div>
+          <!-- dynamic content -->
+        </div>
+        <div class="lg:w-4/12">
+          <div class="p-6 space-y-4 bg-[#F3F3F5] rounded-3xl">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-xl">Title</h4>
+              <p class="opacity-50">
+                <i class="fa-solid fa-check-double text-green-500"></i> Mark
+                as read (<span id="markAsReadCounter">0</span>)
+              </p>
+            </div>
+            <div class="space-y-4 *:opacity-70" id="markAsReadContainer">
+              <!-- dynamic content -->
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+</main>
+</body>
+<!-- Footer  -->
+<footer class="footer bg-black text-neutral-content p-10 flex items-center justify-around">
+    <nav>
+        <div class="flex gap-2">
+        <img src="./images/logo.webp" class="h-4">
+        <a href=""><h2 class="footer-title">Peddy</h2></a>
+    </div>
+        <a class="link link-hover">Location: av. Washington 165, NY CA</a>
+        <a class="link link-hover">54003 Phone: +31 85 964 47 25 Email:</a>
+        <a class="link link-hover">info@yourdomain.com Openings hours:</a>
+        <a class="link link-hover">Advertisement9.00 AM - 5.00 PM</a> 
+        <div class="flex gap-6 mt-4 text-2xl">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+    </nav>
+    <nav>
+        <h6 class="footer-title">Home</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Animals</a>
+        <a class="link link-hover">Foundation</a>
+        <a class="link link-hover">Contact</a>
+    </nav>
+    <nav>
+    <h6 class="footer-title">Drop a Message</h6>
+    <input type="text" placeholder="Enter your email" class="input input-bordered w-full bg-neutral">
+    <button class="btn bg-btnPrimary text-white border-none mt-3">Subscribe</button>
+    <div>
+    </nav>
+</footer>
+<!-- Scripts -->
+ <script src="script.js"></script>
+</html>
