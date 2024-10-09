@@ -25,14 +25,14 @@
              placeHolder:'rgba(17, 17, 17, 0.40)',
             },
             fontFamily:{
-              Lexend: 'Lexend',
+              Lato: 'Lato',
             },
           },
         },
       }  
   </script>
 </head>
-<body>
+<body class="Lato">
 <!-- NavBar -->
 <nav class="container mx-auto w-11/12 lg:w-10/12">
     <div class="navbar py-5 lg:py-7">
@@ -82,57 +82,53 @@
         </div>
     </div>
 </section>
-<!-- Main section -->
- <!-- discussion section -->
+<!-- Content -->
+<!-- Content -->
 <section class="container mx-auto w-11/12 lg:w-10/12 my-12 lg:my-24">
-    <div class="flex lg:w-2/5 mx-auto flex-col items-center justify-center space-y-8 lg:my-12">
-        <h2 class="text-3xl lg:text-5xl font-bold text-center">
-          Let's Discuss
-        </h2>
-        <p class="opacity-60 text-center">
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
-        </p>
-      </div>
-      <div class="flex justify-between space-x-56">
-        <button class="btn text-3xl py-2 px-6 rounded-3xl flex items-center font-normal"><i class="fa-solid fa-dog"></i>Dog</button>
-        <button class="btn text-3xl py-2 px-6 rounded-3xl flex items-center font-normal"><i class="fa-solid fa-cat"></i>Cat</button>
-        <button class="btn text-3xl py-2 px-6 rounded-3xl flex items-center font-normal"><i class="fa-solid fa-otter"></i>Rabbit</button>
-        <button class="btn text-3xl py-2 px-6 rounded-3xl flex items-center font-normal"><i class="fa-solid fa-dove"></i>Birds</button>
-      </div>
-      <!-- discussions with selections -->
-      <div class="flex lg:flex-row flex-col gap-8 my-12">
-        <div id="post-container" class="lg:w-8/12 space-y-5">
-  <!-- demo card showing without dynamic value  -->
+  <div class="flex lg:w-2/5 mx-auto flex-col items-center justify-center space-y-8 lg:my-12">
+      <h2 class="text-3xl lg:text-5xl font-bold text-center">Adopt Your Best Friend</h2>
+      <p class="opacity-60 text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+  </div>
   
+  <div id="category-buttons" class="flex justify-between space-x-56">
+      <!-- Buttons will be dynamically generated here -->
+  </div>
   
+  <div class="flex justify-between items-center mt-8 p-4">
+      <h2 class="text-xl font-bold">Best Deals</h2>
+      <button id="sort-price-btn" class="btn bg-btnPrimary text-white px-3 py-1 rounded-md">Sort by Price</button>
+  </div>
   
-          <div class="flex w-full justify-center">
-            <span
-              id="postLoader"
-              class="loading loading-spinner loading-lg lg:mt-24 text-primary hidden"
-            ></span>
-          </div>
-          <!-- dynamic content -->
-        </div>
-        <div class="lg:w-4/12">
-          <div class="p-6 space-y-4 bg-[#F3F3F5] rounded-3xl">
-            <div class="flex items-center justify-between">
-              <h4 class="font-bold text-xl">Title</h4>
-              <p class="opacity-50">
-                <i class="fa-solid fa-check-double text-green-500"></i> Mark
-                as read (<span id="markAsReadCounter">0</span>)
-              </p>
-            </div>
-            <div class="space-y-4 *:opacity-70" id="markAsReadContainer">
-              <!-- dynamic content -->
-            </div>
-          </div>
-        </div>
+  <div class="flex space-x-4">
+      <div id="category-pets" class="grid grid-cols-1 h-full md:grid-cols-2 lg:grid-cols-3 gap-4 flex-grow">
+          <!-- Pet cards will be dynamically inserted here -->
       </div>
+      <div id="liked-images" class="grid grid-cols-1 lg:grid-cols-2  gap-2 w-1/4 h-full items-start">
+            <!-- Liked pet images will be displayed here -->
+      </div>
+  </div>
 </section>
 
+<!--  Modals -->
+  <!-- Modal Structure -->
+<div id="details-modal" class="modal hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
+  <div class="bg-white p-6 rounded-lg w-11/12 md:w-2/3 lg:w-1/2">
+    <img id="modal-pet-image" class="w-full h-48 object-cover rounded-md mb-4" src="" alt="Pet Image">
+    <h2 id="modal-pet-name" class="text-2xl font-bold mb-2">Pet Name</h2>
+    <p id="modal-breed-info" class="text-lg mb-2">Breed: Unknown</p>
+    <p id="modal-birth-info" class="text-lg mb-2">Birth: Unknown</p>
+    <p id="modal-gender-info" class="text-lg mb-2">Gender: Unknown</p>
+    <p id="modal-price-info" class="text-lg mb-2">Price: $0</p>
+    <p id="modal-vaccination-status" class="text-lg mb-4">Vaccinated: Partially</p>
+    
+    <button id="modal-close-btn" class="btn bg-red-500 text-white rounded-md px-4 py-2 mt-4">Cancel</button>
+  </div>
+</div>
+
+
+
 </main>
-</body>
+
 <!-- Footer  -->
 <footer class="footer bg-black text-neutral-content p-10 flex items-center justify-around">
     <nav>
@@ -165,6 +161,7 @@
     <div>
     </nav>
 </footer>
+</body>
 <!-- Scripts -->
  <script src="script.js"></script>
 </html>
