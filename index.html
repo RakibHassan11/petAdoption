@@ -100,9 +100,14 @@
   </div>
   
   <div class="flex space-x-4">
-      <div id="category-pets" class="grid grid-cols-1 h-full md:grid-cols-2 lg:grid-cols-3 gap-4 flex-grow">
-          <!-- Pet cards will be dynamically inserted here -->
-      </div>
+      <div id="category-pets" class="grid grid-cols-1 h-full md:grid-cols-2 lg:grid-cols-3 gap-4 flex-grow relative">
+    <!-- Spinner -->
+    <div id="pets-spinner" class="absolute inset-0 flex justify-center items-center hidden">
+      <div class="w-10 h-10 border-4 border-t-4 border-gray-200 border-t-blue-500 rounded-full animate-spin"></div>
+  </div>
+    <!-- Pet cards will be dynamically inserted here -->
+   </div>
+
       <div id="liked-images" class="grid grid-cols-1 lg:grid-cols-2  gap-2 w-1/4 h-full items-start">
             <!-- Liked pet images will be displayed here -->
       </div>

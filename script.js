@@ -38,6 +38,8 @@ fetch('https://openapi.programming-hero.com/api/peddy/categories')
   .catch(error => console.error('Error fetching categories:', error));
 
 function fetchPetsByCategory(category) {
+  const spinner = document.getElementById('pets-spinner');
+  spinner.classList.remove('hidden');
   fetch('https://openapi.programming-hero.com/api/peddy/pets')
     .then(response => response.json())
     .then(petData => {
@@ -132,21 +134,21 @@ function createPetCard(pet, container) {
 
   // Button Row
   const buttonRow = document.createElement('div');
-  buttonRow.className = 'flex justify-between mt-4'; // Space out buttons evenly
+  buttonRow.className = 'flex justify-between gap-1 mt-4'; // Space out buttons evenly
 
   // Like Button
   const likeButton = document.createElement('button');
-  likeButton.className = 'btn bg-blue-500 text-white rounded-md px-4 py-2 flex items-center';
+  likeButton.className = 'btn text-btnPrimary rounded-md px-3 py-2 flex items-center';
   likeButton.innerHTML = `<i class="fa-solid fa-thumbs-up mr-1"></i> Like`;
 
   // Adopt Button
   const adoptButton = document.createElement('button');
-  adoptButton.className = 'btn bg-green-500 text-white rounded-md px-4 py-2 flex items-center';
+  adoptButton.className = 'btn text-btnPrimary rounded-md px-3 py-2 flex items-center';
   adoptButton.innerHTML = `<i class="fa-solid fa-heart mr-1"></i> Adopt`;
 
   // Details Button
   const detailsButton = document.createElement('button');
-  detailsButton.className = 'btn bg-gray-500 text-white rounded-md px-4 py-2 flex items-center';
+  detailsButton.className = 'btn text-btnPrimary rounded-md px-3 py-2 flex items-center';
   detailsButton.innerHTML = `<i class="fa-solid fa-info-circle mr-1"></i> Details`;
 
   // Append buttons to the button row
