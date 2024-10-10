@@ -1,3 +1,7 @@
+document.getElementById('view-more-btn').onclick = () => {
+  document.getElementById('main-section').scrollIntoView({behavior:'smooth'});
+};
+
 // Fetch categories and generate buttons
 fetch('https://openapi.programming-hero.com/api/peddy/categories')
   .then(response => response.json())
@@ -38,11 +42,16 @@ fetch('https://openapi.programming-hero.com/api/peddy/categories')
   .catch(error => console.error('Error fetching categories:', error));
 
 function fetchPetsByCategory(category) {
-  const spinner = document.getElementById('pets-spinner');
-  spinner.classList.remove('hidden');
+
+  document.getElementById("pets-spinner").classList.remove("hidden");
+
   fetch('https://openapi.programming-hero.com/api/peddy/pets')
     .then(response => response.json())
     .then(petData => {
+
+      // Hide the spinner after data is fetched
+      document.getElementById("pets-spinner").classList.add("hidden");
+
       const pets = petData.pets;
       const petContainer = document.getElementById('category-pets');
       petContainer.innerHTML = ''; // Clear previous pets
@@ -247,6 +256,8 @@ detailsButton.addEventListener('click', () => {
           <p class="text-left"><i class="fa-solid fa-calendar-alt"></i> Birth: ${pet.birth || 'Unknown'}</p>
           <p class="text-left"><i class="fa-solid fa-venus-mars"></i> Gender: ${pet.gender || 'Unknown'}</p>
           <p class="text-left"><i class="fa-solid fa-dollar-sign"></i> Price: $${pet.price || 'Unknown'}</p>
+          
+          <hr>
           <p class="mt-4 text-left break-words"><i class="fa-solid fa-info-circle"></i> Details: ${pet.pet_details || 'No additional details available'}</p>
           <button class="btn bg-btnPrimary text-white mt-6 w-full rounded-lg">Close</button>
       </div>
