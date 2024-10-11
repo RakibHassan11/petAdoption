@@ -93,8 +93,8 @@ function fetchPetsByCategory(category) {
           noPetheading.textContent = 'No Information Available';
 
           const noPetText = document.createElement('p');
-          noPetText.className = 'lg:text-lg text-xs mt-2 text-center'; 
-          noPetText.textContent = 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at';
+          noPetText.className = 'lg:text-lg text-xs mt-2 text-center opacity-60'; 
+          noPetText.textContent = 'No bird is available at the moment. Please continue browsing other categories!';
 
           // Append elements to the noPetCard
           noPetCard.appendChild(noPetImage);
