@@ -42,8 +42,9 @@
             <div class="dropdown ">
                 <div class="flex items-center justify-around">   
                     <div class="flex gap-2">
-                        <img src="./images/logo.webp" class="h-7">
-                    <a href=""><h2 class="text-common_heading_color text-xl lg:text-4xl font-extrabold">Peddy</h2></a>
+                      <i class="fa-solid fa-bars text-2xl lg:hidden"></i>
+                        <img src="./images/logo.webp" class="lg:h-7 h-5 hidden lg:flex">
+                    <a href=""><h2 class="text-common_heading_color text-2xl lg:text-4xl font-extrabold">Peddy</h2></a>
                     </div>
                 </div>
             </div>
@@ -71,9 +72,9 @@
 <section class="container mx-auto w-11/12 lg:w-10/12">
     <div class="hero min-h-96 rounded-3xl">
         <div class="hero-content flex-col text-center">
-            <p class="font-bold text-gray-400 text-xl">Bringing Families Together ❤️‍🔥</p>
-            <h1 class="text-7xl font-bold"> Your Path to Adoption <br> Starts Here</h1>
-            <p class="py-4 text-sm ">It is a long established fact that a reader will be distracted by the readable content of a page when looking <br> at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            <p class="lg:font-bold text-gray-400 lg:text-xl text-sm">Bringing Families Together ❤️‍🔥</p>
+            <h1 class="lg:text-7xl text-5xl font-bold"> Your Path to Adoption <br> Starts Here</h1>
+            <p class="py-4 lg:text-sm text-xs opacity-60">Welcome to Peddy, where every paw has a story waiting to be told. Discover the joy of adopting a pet! <br> Our platform connects you with lovable pets in need of a forever home.</p>
             <button id="view-more-btn" class="btn bg-btnPrimary text-white">View More</button>
             <div>
                 <img src="./images/pet.webp"class="" /></div>
@@ -87,85 +88,67 @@
 <section id="main-section" class="container mx-auto w-11/12 lg:w-10/12 my-12 lg:my-24">
   <div class="flex lg:w-2/5 mx-auto flex-col items-center justify-center space-y-8 lg:my-12">
       <h2 class="text-3xl lg:text-5xl font-bold text-center">Adopt Your Best Friend</h2>
-      <p class="opacity-60 text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+      <p class="opacity-60 lg:text-sm text-xs text-center">Whether you're looking for a playful puppy, a gentle kitten, or a loyal companion, we make the adoption process easy and fulfilling. Join us in making a difference, one paw at a time!</p>
   </div>
   
-  <div id="category-buttons" class="flex justify-between space-x-56">
+  <div id="category-buttons" class="lg:flex lg:justify-between lg:space-x-56 grid grid-cols-2 gap-4 mt-4">
       <!-- Buttons will be dynamically generated here -->
   </div>
   
   <div class="flex justify-between items-center mt-8 p-4">
-      <h2 class="text-xl font-bold">Best Deals</h2>
-      <button id="sort-price-btn" class="btn bg-btnPrimary text-white px-3 py-1 rounded-md">Sort by Price</button>
+      <h2 class="lg:text-xl font-bold">Best Deals</h2>
+      <button id="sort-price-btn" class="btn bg-btnPrimary lg:text-base text-xs text-white lg:px-3 lg:py-1 rounded-md">Sort by Price</button>
   </div>
   
-  <div class="flex space-x-4">
+  <div class="flex lgspace-x-4">
       <div id="category-pets" class="grid grid-cols-1 h-full md:grid-cols-2 lg:grid-cols-3 gap-4 flex-grow relative">
     <!-- Spinner -->
-    <div id="pets-spinner" class="absolute inset-0 flex justify-center items-center hidden">
+    <div id="pets-spinner" class="absolute flex inset-0 justify-center items-center hidden">
       <div class="w-10 h-10 border-4 border-t-4 border-gray-200 border-t-blue-500 rounded-full animate-spin"></div>
-  </div>
+    </div>
     <!-- Pet cards will be dynamically inserted here -->
    </div>
 
-      <div id="liked-images" class="grid grid-cols-1 lg:grid-cols-2  gap-2 w-1/4 h-full items-start">
+      <div id="liked-images" class="grid grid-cols-1 gap-2 px-1 w-2/5 lg:grid-cols-2 lg:px-2 1/2  lg:gap-2 lg:w-1/4 h-full items-start">
             <!-- Liked pet images will be displayed here -->
       </div>
   </div>
 </section>
 
-<!--  Modals -->
-  <!-- Modal Structure -->
-<div id="details-modal" class="modal hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
-  <div class="bg-white p-6 rounded-lg w-11/12 md:w-2/3 lg:w-1/2">
-    <img id="modal-pet-image" class="w-full h-48 object-cover rounded-md mb-4" src="" alt="Pet Image">
-    <h2 id="modal-pet-name" class="text-2xl font-bold mb-2">Pet Name</h2>
-    <p id="modal-breed-info" class="text-lg mb-2">Breed: Unknown</p>
-    <p id="modal-birth-info" class="text-lg mb-2">Birth: Unknown</p>
-    <p id="modal-gender-info" class="text-lg mb-2">Gender: Unknown</p>
-    <p id="modal-price-info" class="text-lg mb-2">Price: $0</p>
-    <p id="modal-vaccination-status" class="text-lg mb-4">Vaccinated: Partially</p>
-    
-    <button id="modal-close-btn" class="btn bg-red-500 text-white rounded-md px-4 py-2 mt-4">Cancel</button>
-  </div>
-</div>
-
-
 
 </main>
 
 <!-- Footer  -->
-<footer class="footer bg-black text-neutral-content p-10 flex items-center justify-around">
+<footer class="footer bg-black text-neutral-content p-10 flex flex-col items-center justify-start gap-4 md:flex-row md:items-start md:justify-between">
     <nav>
-        <div class="flex gap-2">
+      <div class="flex gap-2 mb-4 md:mb-0">
         <img src="./images/logo.webp" class="h-4">
         <a href=""><h2 class="footer-title">Peddy</h2></a>
-    </div>
-        <a class="link link-hover">Location: av. Washington 165, NY CA</a>
-        <a class="link link-hover">54003 Phone: +31 85 964 47 25 Email:</a>
-        <a class="link link-hover">info@yourdomain.com Openings hours:</a>
-        <a class="link link-hover">Advertisement9.00 AM - 5.00 PM</a> 
-        <div class="flex gap-6 mt-4 text-2xl">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-x-twitter"></i>
-            <i class="fa-brands fa-youtube"></i>
-            <i class="fa-brands fa-instagram"></i>
-        </div>
+      </div>
+      <a class="link link-hover">Location: av. Washington 165, NY CA</a>
+      <a class="link link-hover">54003 Phone: +31 85 964 47 25 Email:</a>
+      <a class="link link-hover">info@yourdomain.com Openings hours:</a>
+      <a class="link link-hover">Advertisement9.00 AM - 5.00 PM</a> 
+      <div class="flex gap-6 mt-4 text-2xl md:mt-0">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
     </nav>
-    <nav>
-        <h6 class="footer-title">Home</h6>
-        <a class="link link-hover">About us</a>
-        <a class="link link-hover">Animals</a>
-        <a class="link link-hover">Foundation</a>
-        <a class="link link-hover">Contact</a>
+    <nav class="mt-4 md:mt-0 ">
+      <h6 class="footer-title">Home</h6>
+      <a class="link link-hover">About us</a>
+      <a class="link link-hover">Animals</a>
+      <a class="link link-hover">Foundation</a>
+      <a class="link link-hover">Contact</a>
     </nav>
-    <nav>
-    <h6 class="footer-title">Drop a Message</h6>
-    <input type="text" placeholder="Enter your email" class="input input-bordered w-full bg-neutral">
-    <button class="btn bg-btnPrimary text-white border-none mt-3">Subscribe</button>
-    <div>
+    <nav class="mt-4 md:mt-0">
+      <h6 class="title">Drop a Message</h6>
+      <input type="text" placeholder="Enter your email" class="input input-bordered w-full bg-neutral">
+      <button class="btn bg-btnPrimary text-white border-none mt-3">Subscribe</button>
     </nav>
-</footer>
+  </footer>
 </body>
 <!-- Scripts -->
  <script src="script.js"></script>
