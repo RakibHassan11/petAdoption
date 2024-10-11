@@ -20,3 +20,5 @@ Project Name: Peddy
  **`fetch` API:** Used to make HTTP requests to retrieve pet data from an external API.
 
  **Live link to the deployed project**
+
+ assignment-10-peddy.surge.sh
