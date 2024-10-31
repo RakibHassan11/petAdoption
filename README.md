@@ -21,5 +21,4 @@ Project Name: Peddy
 
  **Live link to the deployed project:**
 
- assignment-10-peddy.surge.sh
-# petAdoption
+[Link Text]( assignment-10-peddy.surge.sh)
