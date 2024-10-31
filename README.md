@@ -19,6 +19,7 @@ Project Name: Peddy
 * **Destructuring:** Used in a few places to extract properties from objects in a more readable way from a pet object.
  **`fetch` API:** Used to make HTTP requests to retrieve pet data from an external API.
 
- **Live link to the deployed project**
+ **Live link to the deployed project:**
 
  assignment-10-peddy.surge.sh
+# petAdoption
