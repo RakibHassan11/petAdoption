@@ -21,4 +21,4 @@ Project Name: Peddy
 
  **Live link to the deployed project:**
 
-[Link Text]( assignment-10-peddy.surge.sh)
+[Peddy Website](assignment-10-peddy.surge.sh)
