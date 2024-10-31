@@ -21,4 +21,5 @@ Project Name: Peddy
 
  **Live link to the deployed project:**
 
-[Peddy Website](assignment-10-peddy.surge.sh)
+[Peddy Website Surge](https://assignment-10-peddy.surge.sh)
+[Peddy Website GitHub](https://rakibhassan11.github.io/petAdoption/)
